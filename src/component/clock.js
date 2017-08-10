@@ -1,7 +1,5 @@
 import React from 'react';
 
-let time = new Date().toLocaleTimeString();
-
 class Clock extends React.Component {
     constructor(props) {
       super(props);

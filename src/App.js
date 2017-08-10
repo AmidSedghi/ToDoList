@@ -13,7 +13,9 @@ class App extends Component {
   constructor(props){
     super(props)
     this.state = {
-      items: []
+      items: [
+        //{key: Date.now(), text: 'Figure this shit', isComplete: true}
+      ]
     }
   }
 
@@ -24,13 +26,18 @@ class App extends Component {
   ** it will be determined by a check mark
   */
   addItem = (event) => {
-    this.state.items.push(
+    var array = this.state.items; 
+    array.push(
       {
         key: Date.now(),
         text: this._inputElement.value,
         isComplete:false
       }
     );
+
+    this.setState({
+       items: array
+    });
     console.log(this.state.items); 
     // reset the box to nothing after
     this._inputElement.value = "";
@@ -50,7 +57,7 @@ class App extends Component {
             <b>Welcome to Amid's Github</b>
           </h2>
           {/* Clock component is defined in component/clock.js */}
-          <Clock ></Clock>
+          <Clock></Clock>
         </div>
         <div className ="Todo-App">
           <form onSubmit= {this.addItem}>
