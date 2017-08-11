@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://amidsedghi.github.io/react-app",
+  "homepage": "https://amidsedghi.github.io/ToDoList",
   "dependencies": {
     "react": "^15.6.1",
     "react-clock": "^1.0.5",
